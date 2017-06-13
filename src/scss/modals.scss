@@ -1,0 +1,120 @@
+/**
+ * Modals
+ */
+
+@import 'utils/enables';
+@import 'utils/syntaxes';
+@import 'utils/trowel-variables';
+@import 'utils/mixin-example';
+
+$modal--selector: selector(new 'modal' with $modals--syntax);
+
+@if $modals--enabled {
+}
+
+@include statement($modal--selector, (
+  ('position', fixed),
+  ('top', 0),
+  ('right', 0),
+  ('bottom', 0),
+  ('left', 0),
+  ('z-index', $modals--z-index),
+  ('font-size', $modals--font-size),
+  ('font-size', $modals--font-size),
+  ('font-family', $modals--font-family),
+  ('font-weight', $modals--font-weight),
+  ('text-transform', $modals--text-transform),
+  ('letter-spacing', $modals--letter-spacing),
+  ('line-height', $modals--line-height),
+  ('text-align', $modals--text-align),
+  ('text-decoration', $modals--text-decoration),
+  ('color', $modals--color),
+  ('background', $modals--background),
+  ('background-color', $modals--background-color),
+  ('transition', $modals--transition),
+  ('opacity', 0),
+  ('pointer-events', none),
+  ('opacity', 1, '[data-modal="visible"'),
+  ('pointer-events', initial, '[data-modal="visible"'),
+));
+
+
+$modal-dialog--selector: selector(set $modal--selector element 'dialog');
+
+@include statement($modal-dialog--selector, (
+  ('position', relative),
+  ('width', auto),
+  ('max-width', $modals-dialog--max-width),
+  ('margin', $modals-dialog--margin),
+  ('transition', $modals--transition),
+  ('transform', translateY(-100%)),
+  ('transform', translateY(0), '[data-modal="visible"'),
+));
+
+
+$modal-content--selector: selector(set $modal--selector element 'content');
+
+@include statement($modal-content--selector, (
+  ('position', relative),
+  ('display', flex),
+  ('flex-direction', column),
+  ('outline', 0),
+  ('overflow', hidden),
+  ('background-color', $modals-content--background-color),
+  ('border-width', $modals-content--border-width),
+  ('border-style', $modals-content--border-style),
+  ('border-color', $modals-content--border-color),
+  ('border-radius', $modals-content--border-radius),
+  ('box-shadow', $modals-content--box-shadow),
+));
+
+
+$modal-header--selector: selector(set $modal--selector element 'header');
+
+@include statement($modal-header--selector, (
+  ('background-color', $modals-header--background-color),
+  ('border-bottom-width', $modals-header--border-bottom-width),
+  ('border-bottom-style', $modals-header--border-bottom-style),
+  ('border-bottom-color', $modals-header--border-bottom-color),
+  ('padding', $modals-header--padding),
+  ('display', flex),
+  ('justify-content', space-between),
+  ('align-items', center),
+));
+
+
+$modal-close--selector: selector(set $modal--selector element 'close');
+
+@include statement($modal-close--selector, (
+  ('padding', 0),
+  ('cursor', pointer),
+  ('background', 0 0),
+  ('border', 0),
+  ('-webkit-appearance', none),
+  ('font-size', $modals-close--font-size),
+  ('font-weight', $modals-close--font-weight),
+  ('line-height', $modals-close--line-height),
+  ('color', $modals-close--color),
+  ('text-shadow', $modals-close--text-shadow),
+  ('opacity', $modals-close--opacity),
+));
+
+
+$modal-body--selector: selector(set $modal--selector element 'body');
+
+@include statement($modal-body--selector, (
+  ('background-color', $modals-body--background-color),
+  ('padding', $modals-body--padding),
+));
+
+
+$modal-footer--selector: selector(set $modal--selector element 'footer');
+
+@include statement($modal-footer--selector, (
+  ('background-color', $modals-footer--background-color),
+  ('border-top-width', $modals-footer--border-top-width),
+  ('border-top-style', $modals-footer--border-top-style),
+  ('border-top-color', $modals-footer--border-top-color),
+  ('padding', $modals-footer--padding),
+  ('text-align', $modals-footer--text-align),
+));

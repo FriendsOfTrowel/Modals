@@ -1,0 +1,5 @@
+@function modals--mixin-example($value, $flags) {
+  @return (
+    ('content', $value, $flags),
+  );
+}

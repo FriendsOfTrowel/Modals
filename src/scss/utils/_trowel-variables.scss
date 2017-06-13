@@ -1,0 +1,46 @@
+$modals--font-size: 1rem !default;
+$modals--font-family: null !default;
+$modals--font-weight: null !default;
+$modals--text-transform: null !default;
+$modals--letter-spacing: null !default;
+$modals--line-height: null !default;
+$modals--text-align: null !default;
+$modals--text-decoration: null !default;
+$modals--color: null !default;
+$modals--background: null !default;
+$modals--background-color: rgba(0, 0, 0, 0.5) !default;
+$modals--z-index: 1050 !default;
+$modals--transition: all 200ms ease-in-out !default;
+
+$modals-dialog--max-width: 500px !default;
+$modals-dialog--margin: 30px auto !default;
+
+$modals-content--background-color: rgb(255, 255, 255) !default;
+$modals-content--border-width: 1px !default;
+$modals-content--border-style: trwl-theme('border-style') !default;
+$modals-content--border-color: trwl-theme-color('gray-medium') !default;
+$modals-content--border-radius: trwl-theme('border-radius') !default;
+$modals-content--box-shadow: null !default;
+
+$modals-header--background-color: null !default;
+$modals-header--border-bottom-width: $modals-content--border-width !default;
+$modals-header--border-bottom-style: $modals-content--border-style !default;
+$modals-header--border-bottom-color: $modals-content--border-color !default;
+$modals-header--padding: trwl-theme('padding-y') trwl-theme('padding-x') !default;
+
+$modals-close--font-size: 1em !default;
+$modals-close--font-weight: null !default;
+$modals-close--line-height: 1 !default;
+$modals-close--color: null !default;
+$modals-close--text-shadow: null !default;
+$modals-close--opacity: 0.5 !default;
+
+$modals-body--background-color: null !default;
+$modals-body--padding: trwl-theme('padding-y') trwl-theme('padding-x') !default;
+
+$modals-footer--background-color: null !default;
+$modals-footer--border-top-width: $modals-content--border-width !default;
+$modals-footer--border-top-style: $modals-content--border-style !default;
+$modals-footer--border-top-color: $modals-content--border-color !default;
+$modals-footer--padding: trwl-theme('padding-y') trwl-theme('padding-x') !default;
+$modals-footer--text-align: right !default;
